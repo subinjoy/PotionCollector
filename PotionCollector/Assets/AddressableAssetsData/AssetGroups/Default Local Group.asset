@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: c52fb5976803d544a812eba1f080c8a3
+  m_SerializeEntries:
+  - m_GUID: 22953d721e4e6d14797f8f802ca1239c
+    m_Address: Assets/Prefabs/Magic_Potion.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - MAGIC_POTION
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 281380a39318ac94ab54db9af167c2f5
+    m_Address: Assets/Prefabs/PotionB.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - RED_POTION
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6749d68e60706b14cb3c2387f4ea1c32
+    m_Address: Assets/Prefabs/PotionGreen.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - GREEN_POTION
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d99253bea6a97b34683e12d2fdb049c4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1d90c972ec0836e4dbe862467f8a6e77, type: 2}
+    - {fileID: 11400000, guid: e97eeda4a451fe348830303f81bcdd43, type: 2}
