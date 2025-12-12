@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: c52fb5976803d544a812eba1f080c8a3
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: 4bf28e07e4c3987cb3c87bcdbef68556
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -50,10 +50,10 @@ MonoBehaviour:
   m_CheckForContentUpdateRestrictionsOption: 0
   m_MonoScriptBundleCustomNaming: 
   m_RemoteCatalogBuildPath:
-    m_Id: 
+    m_Id: a034628ae89985d4aad1f4826d859eeb
   m_RemoteCatalogLoadPath:
-    m_Id: 
-  m_ContentStateBuildPathProfileVariableName: 
+    m_Id: c4f02aabbf74105428aec1e1ea119647
+  m_ContentStateBuildPathProfileVariableName: <default settings path>
   m_CustomContentStateBuildPath: 
   m_ContentStateBuildPath: 
   m_BuildAddressablesWithPlayerBuild: 0
@@ -79,6 +79,20 @@ MonoBehaviour:
         m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
       - m_Id: c4f02aabbf74105428aec1e1ea119647
         m_Value: <undefined>
+    - m_InheritedParent: 
+      m_Id: 403d385e969450d41a4aa82c689b1e37
+      m_ProfileName: New Profile
+      m_Values:
+      - m_Id: 63ab79dce0071e34a88c870b3e1bd9ca
+        m_Value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+      - m_Id: 79f3a5f92c7f23c4ea9f6cfa5797fc44
+        m_Value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+      - m_Id: a034628ae89985d4aad1f4826d859eeb
+        m_Value: 'ServerData/[BuildTarget]'
+      - m_Id: a1fff2009d475364bb479db21b7ea682
+        m_Value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+      - m_Id: c4f02aabbf74105428aec1e1ea119647
+        m_Value: https://potiongameassets.b-cdn.net/
     m_ProfileEntryNames:
     - m_Id: 63ab79dce0071e34a88c870b3e1bd9ca
       m_Name: Local.LoadPath
@@ -114,4 +128,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3be674dd9898cd349926ba44a4ec6fc2, type: 2}
   - {fileID: 11400000, guid: f8bff6472dc75a24b887b3993c644e24, type: 2}
   - {fileID: 11400000, guid: 43d32192b3025994daed1608e4a188b8, type: 2}
-  m_ActiveProfileId: 7f69dcf09a8db05409dac88f83605572
+  m_ActiveProfileId: 403d385e969450d41a4aa82c689b1e37

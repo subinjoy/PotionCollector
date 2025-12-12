@@ -16,7 +16,6 @@ public class PotionPooler : MonoBehaviour, IGameEventListener<PotionData>, IGame
     [Header("Potion pool Settings")]
     [SerializeField] private List<PotionData> allPotionData;
     [SerializeField] private int initialPoolSize = 5;
-    [SerializeField] private Vector3 spawnAreaSize = new Vector3(10, 1, 10);
     #endregion
 
     #region Private Variabels
@@ -111,6 +110,7 @@ public class PotionPooler : MonoBehaviour, IGameEventListener<PotionData>, IGame
         {
             GameObject potion = pool[data.addressableLabel][0];
             pool[data.addressableLabel].RemoveAt(0);
+            potion.SetActive(true);
             potion.GetComponent<Potion>().Reinitialize(data, spawnPos);
         }
         else
@@ -121,9 +121,11 @@ public class PotionPooler : MonoBehaviour, IGameEventListener<PotionData>, IGame
 
     private Vector3 GetRandomSpawnPosition()
     {
-        float x = Random.Range(-spawnAreaSize.x / 2, spawnAreaSize.x / 2);
-        float z = Random.Range(-spawnAreaSize.z / 2, spawnAreaSize.z / 2);
-        return new Vector3(x, 0.5f, z) + transform.position;
+        float spawnY = 0.5f; //0.5f above the ground
+        float spawnX = Random.Range(-4f, 4f); // X axis bounds
+        float spawnZ = Random.Range(-2f, 8f); // Y axis bounds for camera angle 45 degree
+
+        return new Vector3(spawnX, spawnY, spawnZ);
     }
     #endregion
 }
