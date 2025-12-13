@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "589478669772",
+    "firebase_url": "https://potioncollector-dcb4f-default-rtdb.firebaseio.com",
+    "project_id": "potioncollector-dcb4f",
+    "storage_bucket": "potioncollector-dcb4f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589478669772:android:2b47f528c1530aded3c169",
+        "android_client_info": {
+          "package_name": "com.Subin.PotionCollector"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkB7SW_FONFe-UJwejqCPSZs9QvMGXFRA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,101 +1,127 @@
 using UnityEngine;
+using System;
 
-#region PlayerSessionsData
-[System.Serializable]
-public struct SessionData
+#region Firebase and Session Data
+
+[Serializable]
+public struct SessionRecord
 {
-    public string timestamp;
+    public string userId;
+    public string playerName;
+    public int finalScore;
+    public string sessionStartTime;
+    public string sessionEndTime;
+
+    public SessionRecord(string id, string name, int score, string start, string end)
+    {
+        userId = id;
+        playerName = name;
+        finalScore = score;
+        sessionStartTime = start;
+        sessionEndTime = end;
+    }
+}
+
+[Serializable]
+public struct ScoreEntry
+{
+    public string playerName;
+    public int score;
     public string sessionId;
 
-    public SessionData(string time, string id)
+    public ScoreEntry(string playerName, int score, string sessionId)
     {
-        timestamp = time;
+        this.playerName = playerName;
+        this.score = score;
+        this.sessionId = sessionId;
+    }
+}
+
+#endregion
+
+#region Event Payload Structs
+
+[Serializable]
+public struct SessionData
+{
+    public string sessionStartTime;
+    public string sessionId;
+
+    public SessionData(string startTime, string id)
+    {
+        sessionStartTime = startTime;
         sessionId = id;
     }
 }
 
-[System.Serializable]
+[Serializable]
 public struct GameEndData
 {
-    public string timestamp;
+    public string sessionEndTime;
     public int totalScore;
+    public string endReason;
+    public string sessionId;
+    public string sessionStartTime;
 
-    public GameEndData(string time, int score)
+    public GameEndData(string endTime, int score, string reason, string id, string startTime)
     {
-        timestamp = time;
+        sessionEndTime = endTime;
         totalScore = score;
+        endReason = reason;
+        sessionId = id;
+        sessionStartTime = startTime;
     }
 }
 
-[System.Serializable]
-public struct SyncData
-{
-    public string operationType;
-    public bool success;
-
-    public SyncData(string op, bool succ = false)
-    {
-        operationType = op;
-        success = succ;
-    }
-}
-#endregion
-
-#region PotionData
-[System.Serializable]
-public struct PotionSpawnData
-{
-    public string potionType;
-    public Vector3 position;
-
-    public PotionSpawnData(string type, Vector3 pos)
-    {
-        potionType = type;
-        position = pos;
-    }
-}
-
-[System.Serializable]
+[Serializable]
 public struct PotionCollectionData
 {
-    public string potionType;
+    public string potionName;
     public int value;
-    public string timestamp;
+    public string collectionTimestamp;
 
-    public PotionCollectionData(string type, int val, string time)
+    public PotionCollectionData(string name, int val, string timestamp)
     {
-        potionType = type;
+        potionName = name;
         value = val;
-        timestamp = time;
+        collectionTimestamp = timestamp;
     }
 }
-#endregion
 
-#region ScoreData
-[System.Serializable]
+[Serializable]
+public struct PotionSpawnData 
+{
+    public Vector3 spawnPosition;
+
+    public PotionSpawnData(Vector3 position)
+    {
+        spawnPosition = position;
+    }
+}
+
+[Serializable]
 public struct ScoreUpdateData
 {
     public int newScore;
-    public int scoreDelta;
+    public int delta;
 
-    public ScoreUpdateData(int newS, int delta)
+    public ScoreUpdateData(int newS, int d)
     {
         newScore = newS;
-        scoreDelta = delta;
+        delta = d;
     }
 }
 
-[System.Serializable]
-public struct ScoreEntry
+[Serializable]
+public struct SyncData
 {
-    public string username;
-    public int highScore;
+    public string syncType;
+    public bool isSuccess;
 
-    public ScoreEntry(string name, int score)
+    public SyncData(string type, bool success = true)
     {
-        username = name;
-        highScore = score;
+        syncType = type;
+        isSuccess = success;
     }
 }
 #endregion
-
